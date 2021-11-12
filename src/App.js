@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Signup from './Components/SignUp/Signup';
+import Login from './Components/Login/Login';
+import Main from './Components/Main/Main';
+const App =() => {
+  
+  const [Authentication, setAuthentication] = useState(false);
 
-function App() {
+  const LoginRegistration = () =>{
+    const [login, setLogin] =  useState(false);
+    return(
+      <div>
+      {login ? <Login setSignUp={setLogin} auth={setAuthentication}/> : <Signup setLogin={setLogin} auth={setAuthentication}/> }
+    </div>
+    )
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     { !Authentication ? <LoginRegistration/> : <Main/> }
     </div>
   );
+
+
+
 }
 
 export default App;

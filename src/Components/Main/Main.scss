@@ -1,0 +1,61 @@
+.main{
+   
+    &-menu{
+        
+        margin-bottom: 2%;
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+        margin-top: 5%;
+        
+        select{
+            font-size: 1rem;
+            border-radius: 15px;
+            border: 2px solid rgb(50, 179, 172);
+            padding: 5px 10px;
+        }
+        &_button{
+            cursor: pointer;
+            // border: 0px solid black;
+            padding: 8px 16px;
+            border-radius: 15px;
+            color: rgb(255, 253, 253);
+            background-color: rgb(50, 179, 172);;
+        }
+        &-info{
+            &-btn{
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 15px;
+            
+            border: 1px solid black;
+            margin-left: 5px;
+            &-active{
+                color: rgb(255, 253, 253);
+                background-color: rgb(50, 110, 179);
+            }
+            }
+        }
+    }
+    &-card{
+        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        &-comanyinfo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // align-items: center;
+            height: 79vh;
+           h1{
+               padding-top: 5px;
+               text-align: left;
+           }
+        }
+    }
+}
